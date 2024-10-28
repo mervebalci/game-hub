@@ -1,6 +1,8 @@
 // Optimizing images for the users who have slow internet connection
 
 export default function getCroppedImageUrl( url: string ) {
+  if (!url) return null;
+
   const target = "media/";
 
   // Finding the index of 'media/'
