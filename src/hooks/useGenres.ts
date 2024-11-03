@@ -8,6 +8,9 @@ export interface Genre {
 }
 
 // Shipping a static data of genres to impact user experience
-const useGenres = () => ({ data: genres, isLoading: false, error: null });
+// const useGenres = () => ({ data: genres, isLoading: false, error: null });
+
+// Fetching genres dynamically from API
+const useGenres = () => useData<Genre>("/genres");
 
 export default useGenres;
